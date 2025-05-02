@@ -6,3 +6,6 @@ def home_page(request):
 
 def projects(request):
     return render(request, 'projects.html') 
+
+def culture(request):
+    return render(request, 'cuture.html')   
