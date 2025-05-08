@@ -1,0 +1,17 @@
+<!-- portfolio/templates/portfolio/contact.html -->
+{% extends 'base.html' %}
+{% block title %}Contact | My Portfolio{% endblock %}
+
+{% block content %}
+<h2>Contact Me</h2>
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+{% endblock %}
