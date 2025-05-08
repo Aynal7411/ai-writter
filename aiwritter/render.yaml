@@ -1,0 +1,3 @@
+startCommand: |
+  python manage.py migrate &&
+  gunicorn aiwritter.wsgi:application
